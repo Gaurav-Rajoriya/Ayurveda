@@ -1,0 +1,148 @@
+.main-header{
+    max-width: 1900px;
+    width: 100%;
+}
+
+.upper-header{
+    background:#0091B2;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.middle-header{
+    padding:5px 40px;
+}
+
+.logo {
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-icon p i{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: black;
+}
+
+.header-icon p a{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #0091B2;
+}
+
+.down-header{
+    padding: 5px 40px;
+    background: #395F67;
+}
+
+.logo_header{
+    display: none;
+}
+
+.navbar{
+    width: 89%;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links li a::after{
+    content: '';
+    width: 0%;
+    left: 0%;
+    bottom:0%;
+    background-color: rgb(18, 174, 18);
+    position: absolute;
+    height:2px;
+    border: none;
+    border-radius:20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after{
+    width: 100%;
+}
+
+.nav-links li a{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    font-variant: small-caps;
+    position: relative;
+}
+
+.language{
+    width: 11%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.responsive{
+    display: none;
+}
+
+.click{
+    right:0 !important;
+}
+
+@media screen and (max-width:768px) {
+    .upper-header{
+      display: none;
+    }
+
+    .middle-header{
+        display:none;
+    }
+
+    .nav-links{
+        position: absolute;
+        top:75px;
+        right:100%;
+        width: 100%;
+        z-index: 999;
+        height:70vh;
+        background: #395F67;
+        flex-direction: column;
+        transition: all 0.8s ease-in-out;
+    }
+
+    .language {
+        width: 30%;
+        display: block;
+        position: absolute;
+        top:77px;
+        z-index: 99;
+        right: 1%; 
+    }
+
+    .logo_header{
+        display: block;
+    }
+
+    .responsive{
+        display: block;
+    }
+    .responsive i{
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+    }
+
+    .down-header{
+        padding: 5px 15px;
+    }
+}
